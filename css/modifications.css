@@ -1,0 +1,102 @@
+li.menu-item-has-children:hover > ul.dropdown-menu {
+  display: block;
+}
+li.menu-item-has-children:hover > ul.dropdown-menu li {
+  display: block;
+  top: 65%;
+}
+
+li.menu-item-has-children:focus > ul.dropdown-menu {
+  display: block;
+}
+li.menu-item-has-children:hover > ul.dropdown-menu li {
+  display: block;
+}
+
+ul.dropdown-menu li > ul.dropdown-menu {
+  margin-top: 0;
+  left: 100%;
+  top: 0;
+}
+
+ul.dropdown-menu li:hover > ul.dropdown-menu {
+  display: block;
+}
+ul.dropdown-menu li:focus > ul.dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  max-width: 140px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+nav.blog-pagination > ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+nav.blog-pagination > ul > li {
+  border: none;
+}
+nav.blog-pagination > ul > li > a {
+  background: transparent;
+  border-color: #222;
+  color: #ff9907;
+
+  position: relative;
+  display: block;
+  padding: 0.8rem 1.05rem;
+  margin: 0 5px;
+  line-height: 1.25;
+  color: #222;
+  background: transparent;
+  border-radius: 0;
+  border: 2px solid #eeeeee;
+}
+nav.blog-pagination > ul > li > a:first-child {
+  margin-left: 0;
+}
+nav.blog-pagination > ul > li > a > i {
+  font-size: 14px;
+  color: #222;
+}
+nav.blog-pagination > ul > li > span {
+  position: relative;
+  display: block;
+  padding: 0.8rem 1.05rem;
+  margin: 0 5px;
+  line-height: 1.25;
+  color: #222;
+  background: transparent;
+  border-radius: 0;
+  border: 2px solid #eeeeee;
+
+  background: transparent;
+  border-color: #222;
+  color: #ff9907;
+}
+nav.blog-pagination > ul > li > a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  color: #ff9907;
+  border-color: #222;
+}
+#gallery-1 img {
+  border: none !important;
+  margin: 5px;
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+}
+.footer-social {
+  flex-wrap: wrap;
+}
+.widget_media_gallery .gallery .gallery-item {
+  margin: 0 !important;
+}
+.gallery-item img {
+  margin: 5px;
+}
