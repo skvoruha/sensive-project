@@ -1,21 +1,16 @@
-<?php
-/*
-Template Name: Шаблон страницы туры
-Template Post Type: post, page, product
-*/
-get_header();
-?>
+<?php get_header() ?>
 
 <!--================ Hero sm Banner start =================-->
 <section class="mb-30px">
   <div class="container">
     <div class="hero-banner hero-banner--sm">
       <div class="hero-banner__content">
-        <h1>Tours Page</h1>
+        <h1>Blog details</h1>
         <nav aria-label="breadcrumb" class="banner-breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Tours Page</li>
+            <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
           </ol>
         </nav>
       </div>
@@ -28,30 +23,31 @@ get_header();
 <section class="blog-post-area section-margin">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
-        <?php get_template_part('template-parts/content', 'tours'); ?>
+      <main class="col-lg-8">
+        <?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', 'tours' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
 
 
-
-      </div>
+      </main>
 
       <!-- Start Blog Post Siddebar -->
-      <div class="col-lg-4 sidebar-widgets">
-        <div class="widget-wrap">
-          <?php if ( ! dynamic_sidebar('sidebar-tours') ) :
+      <?php get_sidebar(); ?>
 
-              dynamic_sidebar( 'sidebar-tours' );
-
-              endif; ?>
-        </div>
-      </div>
     </div>
     <!-- End Blog Post Siddebar -->
   </div>
 </section>
 <!--================ End Blog Post Area =================-->
 
-<?php
-
-get_footer();
-?>
+<?php get_footer() ?>
